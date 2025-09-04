@@ -23,7 +23,7 @@ const OmOss = () => {
     {
       name: "Jonas Løvik Jørgensen",
       age: 24,
-      background: "Erfaring med backend utvikling, spesielt med Node.js og Express. Har jobbet med flere API-prosjekter.",
+      background: "Jeg heter Jonas, jeg er født i Kristiansand og er oppvokst i Molde. Jeg har jobbet i Romsdal Gruppen hver sommer siden jeg var 13 år gammel, der var jeg maskinfører for datterselskapet Romsdal Gjenvinning. Fra tidligere har jeg en bachelorgrad i Økonomi og Administrasjon fra Handelshøyskolen BI, derfor har jeg både erfaring med informasjonssystemer og økonomi. På fritiden liker jeg å se på fotball og trene.",
       image: "/jonas.png", 
       linkedin: "https://www.linkedin.com/in/jonas-løvik-jørgensen-b1b013362/",
       github: "https://github.com/JonasLovik"
@@ -67,7 +67,7 @@ const OmOss = () => {
                 <p className="person-age">{member.age} år</p>
                 
                 <div className="person-background">
-                  <h4 className="background-title">Kodebakgrunn</h4>
+                  <h4 className="background-title">Om meg</h4>
                   <p className="background-text">{member.background}</p>
                 </div>
                 
