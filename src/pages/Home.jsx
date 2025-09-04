@@ -5,8 +5,8 @@ function Home() {
   return (
     <main className="container page">
       <section className="hero">
-        <h1>Gruppe 14</h1>
-        <p className="lede">Hjemmeside for IS-310 – presentasjon av gruppe 14.</p>
+        <h1>Prosjekt gjennomføring IS-310</h1>
+        <p className="lede">Velkommen til vår prosjektportal for IS-310! Her finner du informasjon om våre tidligere prosjekter, erfaringer fra prosjektgjennomføring og presentasjon av gruppen.</p>
       </section>
 
       <section className="cards">
@@ -15,6 +15,7 @@ function Home() {
           <p>
             Et utvalg av prosjekter vi har jobbet med gjennom studieforløpet.
           </p>
+          <div style={{flex: 1}} />
           <a className="btn" href="#prosjekter">Les mer</a>
         </article>
         <article className="card">
@@ -22,6 +23,7 @@ function Home() {
           <p>
             Tanker og erfaringer rundt prosjektgjennomføring frem mot bachelor.
           </p>
+          <div style={{flex: 1}} />
           <a className="btn" href="/prosjekt">Gå til prosjekt</a>
         </article>
         <article className="card">
@@ -29,6 +31,7 @@ function Home() {
           <p>
             Informasjon om gruppemedlemmer og hvem vi er.
           </p>
+          <div style={{flex: 1}} />
           <a className="btn" href="/omoss">Om oss</a>
         </article>
       </section>

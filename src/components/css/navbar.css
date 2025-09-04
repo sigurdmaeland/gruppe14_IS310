@@ -48,13 +48,8 @@
 	padding: 0.4rem 0.8rem;
 	border-radius: 8px;
 	background: none;
-	transition: background 0.18s, color 0.18s;
 }
-.navbar-brand:focus,
-.navbar-brand:hover {
-	background: var(--accent);
-	color: #fff;
-}
+
 
 .navbar-menu-toggle {
 	display: none;
