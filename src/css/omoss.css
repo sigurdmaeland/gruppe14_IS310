@@ -1,0 +1,115 @@
+/* Om oss side – polert responsivt design med dark/light mode */
+:root {
+  --bg: #18181b;
+  --text: #f3f4f6;
+  --muted: #a1a1aa;
+  --card: #232326;
+  --border: #27272a;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --shadow: 0 2px 16px rgba(0,0,0,0.10);
+}
+
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --text: #18181b;
+  --muted: #64748b;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+
+.page-container.omoss-page {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.omoss-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.omoss-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+.omoss-subtitle {
+  margin: 0 auto;
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.accent-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.accent-link:hover { color: var(--accent-hover); }
+
+.team-section { margin-top: 1.25rem; }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.person-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.18s, box-shadow 0.2s, background 0.3s, color 0.3s;
+}
+.person-card:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
+
+.profile-image {
+  width: 112px;
+  height: 112px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  display: block;
+  margin: 0 auto 0.75rem auto;
+  background: #e5e7eb;
+}
+
+.person-name { margin: 0.25rem 0 0 0; font-weight: 800; }
+.person-age { margin: 0.15rem 0 0.5rem 0; color: var(--muted); }
+
+.person-background { text-align: left; margin-top: 0.75rem; }
+.background-title { margin: 0 0 0.25rem 0; font-size: 0.95rem; color: var(--muted); }
+.background-text { margin: 0; line-height: 1.5; }
+
+.social-links { display: flex; justify-content: center; gap: 0.5rem; margin-top: 0.85rem; }
+.social-link {
+  color: var(--accent);
+  background: rgba(59,130,246,0.10);
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.55rem;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+.social-link:hover { background: rgba(59,130,246,0.18); color: var(--accent-hover); border-color: rgba(59,130,246,0.35); }
+
+/* Små skjermer */
+@media (max-width: 640px) {
+  .omoss-title { font-size: 1.9rem; }
+  .profile-image { width: 96px; height: 96px; }
+}
