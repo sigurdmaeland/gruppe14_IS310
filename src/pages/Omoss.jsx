@@ -8,8 +8,8 @@ const OmOss = () => {
       name: "Sigurd Bøthun Mæland",
       age: 22,
       subtitle: "Frontend & Designansvarlig",
-      background: "Erfaring med React, JavaScript, og full-stack utvikling. Har jobbet med flere web-prosjekter og har solid bakgrunn innen moderne frontend-teknologier.",
-      image: "/sigurd.png", 
+  background: "Jeg heter Sigurd og er fra Oslo. Sist år jobbet jeg på UiA Hjelp, hvor jeg hjalp studenter med IT-support, bruk av digitale verktøy og generelle spørsmål knyttet til studiehverdagen. Her fikk jeg erfaring med å jobbe med mennesker, problemløsning og kommunikasjon på tvers av fagområder. Jeg har alltid hatt en interesse for både kundetilfredshet og teknologi, og trives svært godt med å finne gode løsninger som skaper verdi for både brukere og bedriften. Jeg har stor interesse for kode, spesielt innenfor React, ASP.NET og moderne webteknologier. Jeg er glad i å jobbe med brukeropplevelse og design (UX/UI), og liker å finne gode løsninger som både ser bra ut og fungerer effektivt.",
+      image: "/sigurd.png",
       linkedin: "https://www.linkedin.com/in/sigurd-mæland-40325636a/",
       github: "https://github.com/Sigurdmaeland"
     },
