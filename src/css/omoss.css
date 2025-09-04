@@ -1,3 +1,10 @@
+.person-subtitle {
+  margin: 0 0 0.3rem 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
 /* Om oss side – polert responsivt design med dark/light mode */
 :root {
   --bg: #18181b;
@@ -57,12 +64,102 @@
 }
 .accent-link:hover { color: var(--accent-hover); }
 
-.team-section { margin-top: 1.25rem; }
+.team-section {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
+
+.person-card-large {
+  max-width: 700px;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  margin: 0 auto;
+}
+
+.person-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2.2rem;
+}
+
+.profile-image-large {
+  width: 140px;
+  height: 140px;
+  min-width: 140px;
+  min-height: 140px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 2.5px solid var(--border);
+  margin: 0;
+  background: #e5e7eb;
+}
+
+.person-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.person-name {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.person-age {
+  margin: 0 0 0.7rem 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.person-background {
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.background-title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.background-text {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 1.08rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.1rem;
+}
+
+@media (max-width: 800px) {
+  .person-card-large {
+    padding: 1.5rem 0.5rem;
+  }
+  .person-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .profile-image-large {
+    width: 110px;
+    height: 110px;
+    min-width: 110px;
+    min-height: 110px;
+  }
 }
 
 .person-card {
@@ -87,12 +184,13 @@
   background: #e5e7eb;
 }
 
-.person-name { margin: 0.25rem 0 0 0; font-weight: 800; }
-.person-age { margin: 0.15rem 0 0.5rem 0; color: var(--muted); }
+.person-name { margin: 0; font-weight: 800; }
+.person-subtitle { margin: 0.35rem 0 0 0; color: var(--muted); font-size: 1.08rem; font-weight: 500; letter-spacing: 0.01em; }
+.person-age { margin: 0.35rem 0 0 0; color: var(--muted); font-size: 1.05rem; }
 
 .person-background { text-align: left; margin-top: 0.75rem; }
 .background-title { margin: 0 0 0.25rem 0; font-size: 0.95rem; color: var(--muted); }
-.background-text { margin: 0; line-height: 1.5; }
+.background-text { margin: 0 0 1.2em 0; line-height: 1.5; }
 
 .social-links { display: flex; justify-content: center; gap: 0.5rem; margin-top: 0.85rem; }
 .social-link {
