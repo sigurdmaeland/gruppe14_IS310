@@ -16,7 +16,7 @@ function Home() {
             Et utvalg av prosjekter vi har jobbet med gjennom studieforløpet.
           </p>
           <div style={{flex: 1}} />
-          <a className="btn" href="#prosjekter">Les mer</a>
+          <a className="btn" href="/tidligere-prosjekter">Les mer</a>
         </article>
         <article className="card">
           <h2>Prosjektgjennomføring</h2>
