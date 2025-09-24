@@ -1,0 +1,394 @@
+/* Interesseområder Section Styles */
+.interesseområder-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--card) 0%, var(--bg) 100%);
+  min-height: 100vh;
+  margin-bottom: 2rem;
+}
+
+.interesseområder-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header Content */
+.header-content {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--accent), #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.main-subtitle {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Grid Layout */
+.områder-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card Styles */
+.område-card {
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.område-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), #6366f1, #8b5cf6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.område-card:hover::before {
+  opacity: 1;
+}
+
+.område-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent);
+}
+
+/* Icon Wrapper */
+.ikon-wrapper {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.område-ikon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--accent), #6366f1);
+  filter: drop-shadow(0 8px 16px rgba(99, 102, 241, 0.3));
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.område-ikon svg {
+  width: 48px;
+  height: 48px;
+  stroke: white;
+}
+
+.område-card:hover .område-ikon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Card Content */
+.card-content {
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 0;
+}
+
+.område-tittel {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.område-beskrivelse {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Details List */
+.detaljer-liste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  text-align: left;
+  width: auto;
+}
+
+.detalj-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.bullet {
+  color: var(--accent);
+  font-weight: 600;
+  margin-right: 0.8rem;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.område-card:hover .bullet {
+  transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .områder-grid {
+    max-width: 600px;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .interesseområder-section {
+    padding: 4rem 0;
+  }
+  
+  .main-title {
+    font-size: 2.2rem;
+  }
+  
+  .områder-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 500px;
+  }
+  
+  .område-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .interesseområder-section {
+    padding: 3rem 0;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .område-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Bedrifter Section Styles */
+.bedrifter-section {
+  max-width: 1040px;
+  margin: 3rem auto 0 auto;
+  padding: 3.5rem 1.8rem;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  color: white;
+  border-radius: 20px;
+}
+
+.bedrifter-section .container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.bedrifter-section .header-content {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.bedrifter-section .main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.bedrifter-section .main-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 650px;
+  margin: 0 auto 1rem auto;
+  line-height: 1.7;
+}
+
+.contact-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* Bedrifter Grid */
+.bedrifter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+  margin: 0 auto;
+}
+
+/* Bedrift Cards */
+.bedrift-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  padding: 1.6rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.bedrift-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.bedrift-card:hover::before {
+  left: 100%;
+}
+
+.bedrift-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(147, 51, 234, 0.5);
+  box-shadow: 0 20px 40px rgba(147, 51, 234, 0.2);
+}
+
+/* Bedrift Icons */
+.bedrift-ikon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #9333ea, #7c3aed);
+  margin-bottom: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.bedrift-card:hover .bedrift-ikon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.bedrift-ikon svg {
+  width: 42px;
+  height: 42px;
+  stroke: white;
+}
+
+/* Bedrift Content */
+.bedrift-tittel {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: white;
+}
+
+.bedrift-beskrivelse {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive for Bedrifter Section */
+@media (max-width: 900px) {
+  .bedrifter-section {
+    max-width: 95%;
+    padding: 3rem 1.5rem;
+  }
+  
+  .bedrifter-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bedrifter-section {
+    max-width: 95%;
+    margin: 2rem auto 0 auto;
+    padding: 3rem 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .bedrifter-section .main-title {
+    font-size: 2.2rem;
+  }
+  
+  .bedrifter-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .bedrift-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bedrifter-section {
+    max-width: 95%;
+    margin: 2rem auto 0 auto;
+    padding: 2.5rem 1rem;
+    border-radius: 12px;
+  }
+  
+  .bedrifter-section .main-title {
+    font-size: 2rem;
+  }
+  
+  .bedrift-ikon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .bedrift-ikon svg {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .bedrift-card {
+    padding: 1.2rem;
+  }
+}
+
+

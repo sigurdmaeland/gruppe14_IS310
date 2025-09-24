@@ -37,7 +37,7 @@ function Navbar() {
   return (
     <header className="navbar-header">
       <nav className="navbar-container">
-        <a href="#hjem" className="navbar-brand" tabIndex={0} aria-label="Gå til Hjem" onClick={(e) => handleSmoothScroll(e, 'hjem')}>
+        <a href="#home" className="navbar-brand" tabIndex={0} aria-label="Gå til Hjem" onClick={(e) => handleSmoothScroll(e, 'home')}>
           Gruppe 14
         </a>
         <button
@@ -54,7 +54,7 @@ function Navbar() {
         <div className={`navbar-menu${menuOpen ? ' open' : ''}`}>
           <ul className="navbar-links">
             <li>
-              <a href="#hjem" className="navbar-link" onClick={(e) => handleSmoothScroll(e, 'hjem')}>
+              <a href="#home" className="navbar-link" onClick={(e) => handleSmoothScroll(e, 'home')}>
                 Hjem
               </a>
             </li>
@@ -69,8 +69,8 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#prosjekt" className="navbar-link" onClick={(e) => handleSmoothScroll(e, 'prosjekt')}>
-                Prosjektgjennomføring
+              <a href="#prosjektønsker" className="navbar-link" onClick={(e) => handleSmoothScroll(e, 'prosjektønsker')}>
+                Prosjektønsker
               </a>
             </li>
             <li>

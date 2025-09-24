@@ -1,0 +1,54 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(0) scale(1.1);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:active {
+  transform: scale(0.95);
+}
+
+/* Kun vis på desktop - skjul på mobile og tablet */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    display: none;
+  }
+}
+
+/* Tilpasning for større skjermer */
+@media (min-width: 1200px) {
+  .scroll-to-top {
+    bottom: 22px;
+    right: 30px;
+    width: 52px;
+    height: 52px;
+  }
+}

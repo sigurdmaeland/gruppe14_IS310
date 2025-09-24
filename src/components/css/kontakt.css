@@ -1,116 +1,250 @@
-/* Contact Section Styles */
-.contact-section {
-  padding: 4rem 0;
-  background: var(--card);
+/* Kontakt seksjon */
+.kontakt-section {
+  padding: 100px 0;
+  background: var(--bg);
+  position: relative;
 }
 
-.contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  max-width: 1200px;
+.kontakt-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.kontakt-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.kontakt-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.kontakt-beskrivelse {
+  font-size: 1.2rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 600px;
   margin: 0 auto;
 }
 
-.contact-info h3 {
-  color: var(--accent);
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.contact-info p {
-  color: var(--text);
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-.contact-details {
-  margin-top: 2rem;
-}
-
-.contact-item {
-  margin-bottom: 1.5rem;
-}
-
-.contact-item h4 {
-  color: var(--accent);
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.contact-item p {
-  color: var(--muted);
-  margin: 0;
-  line-height: 1.5;
-}
-
-.team-links h3 {
-  color: var(--accent);
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.team-links > p {
-  color: var(--text);
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-.member-links {
+.kontakt-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 1fr 400px;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  align-items: start;
 }
 
-.member-link-card {
-  background: var(--bg);
+.kontakt-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: fit-content;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--card);
+  padding: 1rem 1.6rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.info-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+  border-color: var(--accent);
+}
+
+.info-ikon {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-tekst h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.kontakt-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.kontakt-card {
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.kontakt-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 50px rgba(59, 130, 246, 0.2);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card-content {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.kontakt-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   padding: 1.5rem;
+  background: var(--bg);
   border-radius: 12px;
   border: 1px solid var(--border);
-  text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 0.3s ease;
 }
 
-.member-link-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
+.kontakt-method:hover {
+  background: var(--border);
+  border-color: var(--accent);
 }
 
-.member-link-card h4 {
-  color: var(--text);
-  margin-bottom: 0.5rem;
+.kontakt-method svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.kontakt-method h4 {
   font-size: 1rem;
   font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.25rem 0;
 }
 
-.member-link-card p {
-  color: var(--muted);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.member-social {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.member-social .social-link {
+.kontakt-method a {
   color: var(--accent);
   text-decoration: none;
-  padding: 0.3rem 0.8rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  background: rgba(59,130,246,0.1);
-  transition: background 0.2s, color 0.2s;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.member-social .social-link:hover {
-  background: var(--accent);
-  color: white;
+.kontakt-method a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Mobile responsivitet */
+@media (max-width: 968px) {
+  .kontakt-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .kontakt-details {
+    align-items: center;
+  }
+
+  .kontakt-card {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kontakt-section {
+    padding: 80px 20px;
+  }
+
+  .kontakt-title {
+    font-size: 2.5rem;
+  }
+
+  .kontakt-beskrivelse {
+    font-size: 1.1rem;
+  }
+
+  .info-item {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .info-ikon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .info-tekst h3 {
+    font-size: 1rem;
+  }
+
+  .card-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .kontakt-title {
+    font-size: 2rem;
+  }
+
+  .info-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .kontakt-method {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
 }
 
 /* Responsive Design */
