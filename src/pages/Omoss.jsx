@@ -48,7 +48,7 @@ const OmOss = () => {
         <div className="omoss-header">
           <h1 className="omoss-title">Om Oss</h1>
           <p className="omoss-subtitle">
-            Velkommen til oss i gruppe 9. Vi er fire studenter som 
+            Velkommen til oss i gruppe 14. Vi er fire studenter som 
             gjennom flere semestere har jobbet delaktig sammen for å utarbeide gode resultater og lærdom gjennom bachelorprogrammet, IT og Informasjonssystemer på <a href="https://www.uia.no" target="_blank" rel="noopener noreferrer" className="accent-link">Universitetet i Agder (UiA)</a>.
             Gjennom studiene har studentene bygget god faglig kompetanse på både individuelt plan, og i felleskap. Gruppen har sammen utarbeidet en arbeidsdynamikk som effektivt tar i bruk enkeltpersoners evner, erfaringer, styrker og svakheter, for å skape et arbeidsmiljø som er inkluderende og effektivt ved prosjektgjennomføring og arbeid. Denne sammensetningen skaper rom for åpenhet, troverdighet og utfyllelse ved hverandres evner, tanker og ønsker ved et gitt arbeid. 
           </p>
