@@ -1,27 +1,14 @@
-import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Omoss from './pages/Omoss'
-import Prosjekt from './pages/Prosjekt'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import ScrollToTop from './components/ScrollToTop'
 import './pages/style.css'
-import TidligereProsjekter from './pages/Tidligereprosjekter'
-
 
 function App() {
-
   return (
     <div className="app-layout">
       <Navbar />
-      <ScrollToTop />
       <main className="app-main">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/prosjekt" element={<Prosjekt />} />
-          <Route path="/omoss" element={<Omoss />} />
-          <Route path="/tidligere-prosjekter" element={<TidligereProsjekter />} />
-        </Routes>
+        <Home />
       </main>
       <Footer />
     </div>

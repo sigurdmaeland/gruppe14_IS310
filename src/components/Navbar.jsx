@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import './css/navbar.css';
 
 function Navbar() {
@@ -21,12 +20,26 @@ function Navbar() {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
+  const handleSmoothScroll = (e, targetId) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <header className="navbar-header">
       <nav className="navbar-container">
-        <NavLink to="/" className="navbar-brand" tabIndex={0} aria-label="Gå til Hjem">
+        <a href="#hjem" className="navbar-brand" tabIndex={0} aria-label="Gå til Hjem" onClick={(e) => handleSmoothScroll(e, 'hjem')}>
           Gruppe 14
-        </NavLink>
+        </a>
         <button
           className={`navbar-menu-toggle${menuOpen ? ' open' : ''}`}
           aria-label={menuOpen ? 'Lukk meny' : 'Åpne meny'}
@@ -41,26 +54,36 @@ function Navbar() {
         <div className={`navbar-menu${menuOpen ? ' open' : ''}`}>
           <ul className="navbar-links">
             <li>
-              <NavLink to="/" end className={({ isActive }) => `navbar-link${isActive ? ' active' : ''}`} onClick={() => setMenuOpen(false)}>
+              <a href="#hjem" className="navbar-link" onClick={(e) => handleSmoothScroll(e, 'hjem')}>
                 Hjem
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/prosjekt" className={({ isActive }) => `navbar-link${isActive ? ' active' : ''}`} onClick={() => setMenuOpen(false)}>
-                Prosjekt
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/omoss" className={({ isActive }) => `navbar-link${isActive ? ' active' : ''}`} onClick={() => setMenuOpen(false)}>
+              <a href="#omoss" className="navbar-link" onClick={(e) => handleSmoothScroll(e, 'omoss')}>
                 Om oss
-              </NavLink>
+              </a>
+            </li>
+            <li>
+              <a href="#prosjekter" className="navbar-link" onClick={(e) => handleSmoothScroll(e, 'prosjekter')}>
+                Prosjekter
+              </a>
+            </li>
+            <li>
+              <a href="#prosjekt" className="navbar-link" onClick={(e) => handleSmoothScroll(e, 'prosjekt')}>
+                Prosjektgjennomføring
+              </a>
+            </li>
+            <li>
+              <a href="#kontakt" className="navbar-link" onClick={(e) => handleSmoothScroll(e, 'kontakt')}>
+                Kontakt
+              </a>
             </li>
           </ul>
           <button className="navbar-theme-toggle" onClick={toggleTheme} aria-label="Bytt mellom mørk og lys modus">
             {theme === 'dark' ? (
-              <span className="navbar-theme-icon moon" />
-            ) : (
               <span className="navbar-theme-icon sun" />
+            ) : (
+              <span className="navbar-theme-icon moon" />
             )}
           </button>
         </div>

@@ -1,0 +1,140 @@
+/* Contact Section Styles */
+.contact-section {
+  padding: 4rem 0;
+  background: var(--card);
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.contact-info p {
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.contact-details {
+  margin-top: 2rem;
+}
+
+.contact-item {
+  margin-bottom: 1.5rem;
+}
+
+.contact-item h4 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.contact-item p {
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.team-links h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.team-links > p {
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.member-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.member-link-card {
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.member-link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.member-link-card h4 {
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.member-link-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.member-social {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.member-social .social-link {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: rgba(59,130,246,0.1);
+  transition: background 0.2s, color 0.2s;
+}
+
+.member-social .social-link:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .member-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 3rem 0;
+  }
+  
+  .member-links {
+    gap: 1rem;
+  }
+  
+  .member-link-card {
+    padding: 1rem;
+  }
+}

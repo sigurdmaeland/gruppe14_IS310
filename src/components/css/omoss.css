@@ -1,0 +1,167 @@
+/* Om oss section styles */
+.omoss-section {
+  padding: 4rem 0;
+  background: var(--bg);
+}
+
+.omoss-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+}
+
+.omoss-subtitle {
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.accent-link {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.accent-link:hover {
+  color: var(--accent-hover);
+}
+
+.team-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.person-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.person-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.person-flex {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid var(--border);
+}
+
+.person-info {
+  flex: 1;
+}
+
+.person-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.5rem 0;
+}
+
+.person-age {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0 0 0.3rem 0;
+}
+
+.person-subtitle {
+  margin: 0 0 1rem 0;
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.person-background {
+  margin-bottom: 1.5rem;
+}
+
+.background-text {
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.background-text:last-child {
+  margin-bottom: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(59,130,246,0.1);
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.social-link:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .person-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .profile-image {
+    align-self: center;
+  }
+  
+  .person-card {
+    padding: 1.5rem;
+  }
+  
+  .omoss-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .person-card {
+    padding: 1.25rem;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .person-name {
+    font-size: 1.3rem;
+  }
+}
