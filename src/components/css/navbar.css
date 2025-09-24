@@ -57,6 +57,7 @@
 	border: none;
 	padding: 0.5rem;
 	margin-left: auto;
+	margin-right: 1rem;
 	cursor: pointer;
 	border-radius: 8px;
 	transition: background 0.18s;
@@ -256,6 +257,7 @@
 
 	.navbar-menu-toggle {
 		padding: 0.4rem;
+		margin-right: 0.75rem;
 	}
 
 	.navbar-icon-hamburger {
