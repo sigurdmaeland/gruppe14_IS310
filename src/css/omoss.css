@@ -31,17 +31,29 @@
 .page-container.omoss-page {
   background: var(--bg);
   color: var(--text);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .content-wrapper {
-  max-width: 1100px;
   width: 100%;
-  margin: 0 auto;
-  padding: 3.2rem 0 3.5rem 0;
+  max-width: 1100px;
+  margin: 0;
+  padding: 3.2rem 1rem 3.5rem 1rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
+}
+
+/* Sikre at container ikke påvirker omoss-siden */
+.page-container.omoss-page .container {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .omoss-header {
@@ -80,26 +92,24 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  align-items: stretch;
+  align-items: center;
   width: 100%;
-  max-width: 1080px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 100%;
 }
 
 
 .person-card-large {
-  max-width: 100%;
   width: 100%;
+  max-width: 1000px;
   padding: 2.2rem 2.5rem;
   background: var(--card);
-    min-height: 440px;
+  min-height: 340px;
   border-radius: 18px;
   box-shadow: var(--shadow);
   margin: 0 auto;
-  min-height: 340px;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  box-sizing: border-box;
 }
 
 .person-flex {
@@ -167,24 +177,217 @@
   padding-bottom: 0.2rem;
 }
 
-@media (max-width: 800px) {
+/* --- MOBILRESPONSIV DESIGN --- */
+
+/* Tablets og mindre desktop */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    padding: 2.5rem 2rem 3rem 2rem;
+  }
+  
+  .omoss-header {
+    margin-bottom: 2rem;
+  }
+  
   .team-section {
-    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
   }
+  
   .person-card-large {
-    max-width: 98vw;
-    padding: 1.5rem 0.5rem;
+    padding: 2rem;
+    max-width: 95%;
   }
+}
+
+/* Store tablets og små laptops */
+@media (max-width: 900px) {
+  .person-flex {
+    gap: 2rem;
+  }
+  
+  .profile-image-large {
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 2rem 1.5rem;
+  }
+  
+  .omoss-title {
+    font-size: 2.2rem;
+  }
+  
+  .omoss-subtitle {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+  
+  .team-section {
+    gap: 1.8rem;
+    margin-top: 1.5rem;
+  }
+  
+  .person-card-large {
+    padding: 1.8rem 1.5rem;
+    min-height: auto;
+    width: 100%;
+    max-width: 96%;
+    margin: 0 auto;
+  }
+  
   .person-flex {
     flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .profile-image-large {
+    width: 130px;
+    height: 130px;
+    min-width: 130px;
+    min-height: 130px;
+  }
+  
+  .person-info {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .person-name {
+    font-size: 1.4rem;
+  }
+  
+  .person-background {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .background-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+}
+
+/* Mobile enheter */
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 1.5rem 1rem;
+  }
+  
+  .omoss-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .omoss-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .omoss-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .team-section {
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+  }
+  
+  .person-card-large {
+    padding: 1.5rem 1rem;
+    margin: 0 auto;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .person-flex {
     gap: 1.2rem;
   }
+  
   .profile-image-large {
     width: 110px;
     height: 110px;
     min-width: 110px;
     min-height: 110px;
+  }
+  
+  .person-name {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .person-age {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .person-subtitle {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .background-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .social-links {
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  
+  .social-link {
+    padding: 0.5rem 0.6rem;
+    border-radius: 12px;
+  }
+}
+
+/* Veldig små skjermer */
+@media (max-width: 360px) {
+  .content-wrapper {
+    padding: 1.2rem 0.75rem;
+  }
+  
+  .omoss-title {
+    font-size: 1.6rem;
+  }
+  
+  .omoss-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .person-card-large {
+    padding: 1.2rem 0.8rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .profile-image-large {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+  }
+  
+  .person-name {
+    font-size: 1.2rem;
+  }
+  
+  .background-text {
+    font-size: 0.95rem;
   }
 }
 
@@ -232,7 +435,7 @@
 }
 .social-link:hover { background: rgba(59,130,246,0.18); color: var(--accent-hover); border-color: rgba(59,130,246,0.35); }
 
-/* Små skjermer */
+/* Små skjermer - generell fallback */
 @media (max-width: 640px) {
   .omoss-title { font-size: 1.9rem; }
   .profile-image { width: 96px; height: 96px; }
