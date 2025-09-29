@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-image-wrapper">
           <img 
-            src="/henrik.png" 
+            src="/gruppebilde2.jpg" 
             alt="Gruppe 14 - Fire studenter fra Universitetet i Agder"
             className="hero-background-image"
             onError={(e) => {

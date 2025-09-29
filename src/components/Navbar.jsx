@@ -81,9 +81,9 @@ function Navbar() {
           </ul>
           <button className="navbar-theme-toggle" onClick={toggleTheme} aria-label="Bytt mellom mørk og lys modus">
             {theme === 'dark' ? (
-              <span className="navbar-theme-icon sun" />
-            ) : (
               <span className="navbar-theme-icon moon" />
+            ) : (
+              <span className="navbar-theme-icon sun" />
             )}
           </button>
         </div>
