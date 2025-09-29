@@ -4,6 +4,14 @@
   background: var(--card);
 }
 
+.project-subsection {
+  margin-bottom: 4rem;
+}
+
+.project-subsection:last-child {
+  margin-bottom: 0;
+}
+
 .projects-section .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -325,5 +333,34 @@
 }
 
 .project-card.project-2 .project-title {
+  color: #4facfe;
+}
+
+
+
+/* Current Project Cards Styling */
+.project-card.current-project-1 {
+  border-color: #667eea;
+}
+
+.project-card.current-project-1:hover {
+  border-color: #667eea;
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+}
+
+.project-card.current-project-1 .project-title {
+  color: #667eea;
+}
+
+.project-card.current-project-2 {
+  border-color: #4facfe;
+}
+
+.project-card.current-project-2:hover {
+  border-color: #4facfe;
+  box-shadow: 0 20px 40px rgba(79, 172, 254, 0.2);
+}
+
+.project-card.current-project-2 .project-title {
   color: #4facfe;
 }
