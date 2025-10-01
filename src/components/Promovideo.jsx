@@ -13,15 +13,14 @@ const Promovideo = () => {
         </div>
         
         <div className="video-container">
-          <div className="video-placeholder">
-            <div className="placeholder-icon">🎬</div>
-            <h3>Promovideo kommer snart!</h3>
-            <p>Vi jobber med å lage en spennende video som presenterer gruppen vår.</p>
-            <div className="placeholder-info">
-              <span>📐 300×519px</span>
-              <span>🎞️ MP4 Format</span>
-            </div>
-          </div>
+          <video 
+            className="promo-video"
+            controls
+            poster="/video-thumbnail.jpg"
+          >
+            <source src="/promovideo.mp4" type="video/mp4" />
+            Din nettleser støtter ikke videoavspilling.
+          </video>
         </div>
       </div>
     </section>
