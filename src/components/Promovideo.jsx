@@ -13,14 +13,16 @@ const Promovideo = () => {
         </div>
         
         <div className="video-container">
-          <video 
-            className="promo-video"
-            controls
-            poster="/video-thumbnail.jpg"
-          >
-            <source src="/promovideo.mp4" type="video/mp4" />
-            Din nettleser støtter ikke videoavspilling.
-          </video>
+          <div className="youtube-container">
+            <iframe
+              className="youtube-video"
+              src="https://www.youtube.com/embed/9z8irRiijeo"
+              title="Gruppe 14 - Promovideo"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
         </div>
       </div>
     </section>
