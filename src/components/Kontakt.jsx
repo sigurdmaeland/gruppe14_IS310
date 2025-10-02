@@ -1,14 +1,53 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Lightbulb, Target, Users, Mail, Phone, Calendar, MapPin } from 'lucide-react';
 import './css/kontakt.css';
 
 const Kontakt = () => {
+  const cardRef = useRef(null);
+  
   const teamMembers = [
     { name: "Ole", email: "olebo@uia.no", phone: "+47 908 55 170" },
     { name: "Henrik", email: "henriksl@uia.no", phone: "+47 XXX XX XXX" },
     { name: "Jonas", email: "jonaslj@uia.no", phone: "+47 XXX XX XXX" },
     { name: "Sigurd", email: "sigurdbm@uia.no", phone: "+47 XXX XX XXX" }
   ];
+
+  useEffect(() => {
+    const card = cardRef.current;
+    if (!card) return;
+
+    const handleScroll = () => {
+      const rect = card.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const cardCenter = rect.top + rect.height / 2;
+      const screenCenter = windowHeight / 2;
+      
+      // Beregn hvor langt fra sentrum iPhone'n er (normalisert fra -1 til 1)
+      const distanceFromCenter = (cardCenter - screenCenter) / screenCenter;
+      
+      // Begrens verdien til mellom -1 og 1
+      const clampedDistance = Math.max(-1, Math.min(1, distanceFromCenter));
+      
+      // Konverter til rotasjonsgrader (maks ±15 grader)
+      const rotationX = clampedDistance * 15;
+      
+      // Legg til subtil Y-rotasjon basert på posisjon
+      const rotationY = clampedDistance * 5;
+      
+      // Oppdater transform
+      card.style.transform = `perspective(1200px) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+    };
+
+    // Legg til scroll listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Kjør en gang ved mount
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <section id="kontakt" className="kontakt-section">
@@ -60,7 +99,7 @@ const Kontakt = () => {
           </div>
 
           <div className="kontakt-info-container">
-            <div className="kontakt-card">
+            <div className="kontakt-card" ref={cardRef}>
               <h4>Kontakt</h4>
               <div className="kontakt-methods">
                 <a href="mailto:olebo@uia.no" className="kontakt-method primary">
