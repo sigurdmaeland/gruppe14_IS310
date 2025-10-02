@@ -1,78 +1,89 @@
 import React from 'react';
-import { Calendar, Users, MapPin, Clock, Mail, Phone } from 'lucide-react';
+import { Lightbulb, Target, Users, Mail, Phone, Calendar, MapPin } from 'lucide-react';
 import './css/kontakt.css';
 
 const Kontakt = () => {
+  const teamMembers = [
+    { name: "Ole", email: "olebo@uia.no", phone: "+47 908 55 170" },
+    { name: "Henrik", email: "henriksl@uia.no", phone: "+47 XXX XX XXX" },
+    { name: "Jonas", email: "jonaslj@uia.no", phone: "+47 XXX XX XXX" },
+    { name: "Sigurd", email: "sigurdbm@uia.no", phone: "+47 XXX XX XXX" }
+  ];
+
   return (
     <section id="kontakt" className="kontakt-section">
       <div className="container">
         <div className="kontakt-header">
-          <h2 className="kontakt-title">Knytt Kontakt!</h2>
-          <p className="kontakt-beskrivelse">
-            Vi søker praksisplasser og er åpne for alle typer samarbeid.
-            <br />
-            Send oss en melding hvis dere har interessante prosjekter.
+          <h2 className="kontakt-title">La Oss Samarbeide!</h2>
+          <p className="kontakt-subtitle">
+            Vi er klare til å bidra på ditt neste prosjekt
           </p>
         </div>
 
-        <div className="kontakt-content">
-          <div className="kontakt-info">
-            <div className="info-item">
-              <div className="info-ikon">
-                <Calendar size={24} />
+        <div className="kontakt-grid">
+          <div className="styrker-container">
+            <h3 className="styrker-title">Våre Styrker</h3>
+            <div className="styrker-liste">
+              <div className="styrke-item">
+                <div className="styrke-nummer">01</div>
+                <div className="styrke-content">
+                  <Lightbulb className="styrke-ikon" />
+                  <div>
+                    <h4>Kreativ problemløsning</h4>
+                    <p>Vi tenker utradisjonelt og finner innovative løsninger på komplekse utfordringer</p>
+                  </div>
+                </div>
               </div>
-              <div className="info-tekst">
-                <h3>Tilgjengelig for praksis våren 2026</h3>
-              </div>
-            </div>
 
-            <div className="info-item">
-              <div className="info-ikon">
-                <Users size={24} />
+              <div className="styrke-item">
+                <div className="styrke-nummer">02</div>
+                <div className="styrke-content">
+                  <Target className="styrke-ikon" />
+                  <div>
+                    <h4>Resultatorientert arbeidsmetode</h4>
+                    <p>Vi leverer alltid i tide og holder høy kvalitet gjennom hele prosjektforløpet</p>
+                  </div>
+                </div>
               </div>
-              <div className="info-tekst">
-                <h3>Kan arbeide individuelt eller som team</h3>
-              </div>
-            </div>
 
-            <div className="info-item">
-              <div className="info-ikon">
-                <MapPin size={24} />
-              </div>
-              <div className="info-tekst">
-                <h3>Åpne for både fysisk og fjernarbeid</h3>
-              </div>
-            </div>
-
-            <div className="info-item">
-              <div className="info-ikon">
-                <Clock size={24} />
-              </div>
-              <div className="info-tekst">
-                <h3>Fleksible på varighet og omfang</h3>
+              <div className="styrke-item">
+                <div className="styrke-nummer">03</div>
+                <div className="styrke-content">
+                  <Users className="styrke-ikon" />
+                  <div>
+                    <h4>Sterkt teamsamarbeid</h4>
+                    <p>Erfaring med både individuelt arbeid og tverrfaglig samarbeid i team</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="kontakt-details">
+          <div className="kontakt-info-container">
             <div className="kontakt-card">
-              <div className="card-header">
-                <h3>Kontaktinformasjon</h3>
+              <h4>Kontakt</h4>
+              <div className="kontakt-methods">
+                <a href="mailto:olebo@uia.no" className="kontakt-method primary">
+                  <Mail size={18} />
+                  <span>Send e-post</span>
+                </a>
+                <a href="tel:+4790855170" className="kontakt-method secondary">
+                  <Phone size={18} />
+                  <span>Ring oss</span>
+                </a>
               </div>
-              <div className="card-content">
-                <div className="kontakt-method">
-                  <Mail size={20} />
-                  <div>
-                    <h4>E-post</h4>
-                    <a href="mailto:olebo@uia.no">olebo@uia.no</a>
-                  </div>
-                </div>
-                <div className="kontakt-method">
-                  <Phone size={20} />
-                  <div>
-                    <h4>Telefon</h4>
-                    <a href="tel:+4790855170">+47 908 55 170</a>
-                  </div>
+              
+              <div className="team-kontakt">
+                <p className="team-label">Eller kontakt oss individuelt:</p>
+                <div className="team-members">
+                  {teamMembers.map((member, index) => (
+                    <div key={index} className="member-kontakt">
+                      <span className="member-navn">{member.name}</span>
+                      <a href={`mailto:${member.email}`} className="member-email">
+                        {member.email}
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
