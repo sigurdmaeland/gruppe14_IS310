@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Hero from '../components/Hero';
 import Omoss from '../components/Omoss';
 import Prosjekt from '../components/Prosjekt';
-import Prosjektønsker from '../components/Prosjektønsker';
 import Kontakt from '../components/Kontakt';
 import ScrollToTop from '../components/ScrollToTop';
 import './style.css';
@@ -71,7 +70,6 @@ const Home = () => {
       <Hero />
       <Omoss />
       <Prosjekt />
-      <Prosjektønsker />
       <Kontakt />
       <ScrollToTop />
     </div>
