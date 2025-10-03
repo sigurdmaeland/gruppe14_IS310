@@ -84,7 +84,7 @@ const Kontakt = () => {
         <div className="kontakt-header">
           <h2 className="kontakt-title">La Oss Samarbeide!</h2>
           <p className="kontakt-subtitle">
-            Vi er klare til å bidra på ditt neste prosjekt
+            Vi er klare til å bidra på ditt neste prosjekt høsten 2026
           </p>
         </div>
 
