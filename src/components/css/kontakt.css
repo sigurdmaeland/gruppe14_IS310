@@ -619,3 +619,23 @@
   }
 }
 
+/* Kraftig 3D Scroll-animasjon for iPhone */
+.kontakt-card {
+  transform-style: preserve-3d;
+  transition: none; /* Fjern transition for smooth real-time animasjon */
+  will-change: transform, box-shadow; /* Optimalisering for performance */
+  backface-visibility: hidden; /* Forhindre flickering */
+}
+
+/* Ekstra 3D-dybde for mobile enheter */
+@media (max-width: 768px) {
+  .kontakt-card {
+    transform-origin: center center;
+  }
+  
+  .kontakt-info-container {
+    perspective: 1500px; /* Økt perspektiv for mer dramatisk effekt */
+    perspective-origin: center center;
+  }
+}
+

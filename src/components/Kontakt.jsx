@@ -25,21 +25,50 @@ const Kontakt = () => {
       // Beregn hvor langt fra sentrum iPhone'n er (normalisert fra -1 til 1)
       const distanceFromCenter = (cardCenter - screenCenter) / screenCenter;
       
-      // Begrens verdien til mellom -1 og 1
-      const clampedDistance = Math.max(-1, Math.min(1, distanceFromCenter));
+      // Begrens verdien til mellom -1.5 og 1.5 for mer dramatisk effekt
+      const clampedDistance = Math.max(-1.5, Math.min(1.5, distanceFromCenter));
       
-      // Konverter til rotasjonsgrader (maks ±15 grader)
-      const rotationX = clampedDistance * 15;
+      // Kraftigere rotasjoner (maks ±35 grader X, ±20 grader Y)
+      const rotationX = clampedDistance * 35;
+      const rotationY = clampedDistance * 20;
       
-      // Legg til subtil Y-rotasjon basert på posisjon
-      const rotationY = clampedDistance * 5;
+      // Legg til Z-rotasjon for enda mer dramatisk effekt
+      const rotationZ = clampedDistance * 8;
       
-      // Oppdater transform
-      card.style.transform = `perspective(1200px) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+      // Scale-effekt - iPhone'n blir litt mindre når den er langt unna sentrum
+      const scale = 1 - Math.abs(clampedDistance) * 0.1;
+      
+      // Vertikal forskyvning for mer dynamikk
+      const translateY = clampedDistance * 15;
+      const translateX = clampedDistance * 8;
+      
+      // Oppdater transform med alle effekter
+      card.style.transform = `
+        perspective(1000px) 
+        rotateX(${rotationX}deg) 
+        rotateY(${rotationY}deg) 
+        rotateZ(${rotationZ}deg)
+        scale(${scale})
+        translateY(${translateY}px)
+        translateX(${translateX}px)
+      `;
+      
+      // Oppdater box-shadow basert på posisjon for mer dramatikk
+      const shadowIntensity = Math.abs(clampedDistance);
+      const shadowY = 20 + shadowIntensity * 30;
+      const shadowBlur = 30 + shadowIntensity * 40;
+      const shadowSpread = shadowIntensity * 10;
+      
+      card.style.boxShadow = `
+        0 0 0 2px #000,
+        0 ${shadowY}px ${shadowBlur}px rgba(0, 0, 0, ${0.3 + shadowIntensity * 0.4}),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 ${shadowSpread}px ${shadowBlur + 20}px rgba(0, 0, 0, ${0.2 + shadowIntensity * 0.3})
+      `;
     };
 
     // Legg til scroll listener
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     
     // Kjør en gang ved mount
     handleScroll();
