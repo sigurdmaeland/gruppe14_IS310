@@ -575,44 +575,7 @@
     z-index: 10;
   }
   
-  /* Volume knapper (venstre side) */
-  .kontakt-info-container::before {
-    content: '';
-    position: absolute;
-    left: -3px;
-    top: 60px;
-    width: 3px;
-    height: 25px;
-    background: linear-gradient(to right, #2c2c2e, #3c3c3e);
-    border-radius: 1px 0 0 1px;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
-  }
-  
-  .kontakt-info-container::after {
-    content: '';
-    position: absolute;
-    left: -3px;
-    top: 95px;
-    width: 3px;
-    height: 25px;
-    background: linear-gradient(to right, #2c2c2e, #3c3c3e);
-    border-radius: 1px 0 0 1px;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
-  }
-  
-  /* Power knapp (høyre side) - bruker kontakt-grid for posisjonering */
-  .kontakt-grid::after {
-    content: '';
-    position: absolute;
-    right: calc(50% - 225px - 3px);
-    top: 140px;
-    width: 3px;
-    height: 35px;
-    background: linear-gradient(to left, #2c2c2e, #3c3c3e);
-    border-radius: 0 1px 1px 0;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
-    z-index: 5;
-  }
+
   
   .kontakt-grid {
     position: relative;
