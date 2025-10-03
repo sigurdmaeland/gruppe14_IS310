@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Hero from '../components/Hero';
 import Omoss from '../components/Omoss';
-import Promovideo from '../components/Promovideo';
 import Prosjekt from '../components/Prosjekt';
 import Prosjektønsker from '../components/Prosjektønsker';
 import Kontakt from '../components/Kontakt';
@@ -71,7 +70,6 @@ const Home = () => {
     <div className="single-page-container">
       <Hero />
       <Omoss />
-      <Promovideo />
       <Prosjekt />
       <Prosjektønsker />
       <Kontakt />
