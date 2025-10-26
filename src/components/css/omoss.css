@@ -165,3 +165,18 @@
     font-size: 1.3rem;
   }
 }
+
+/* Center social icons for medium-small screens (roughly less than half a desktop width) */
+@media (max-width: 900px) {
+  .social-links {
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+
+  .social-link {
+    width: 39px;
+    height: 39px;
+    border-radius: 10px;
+  }
+}

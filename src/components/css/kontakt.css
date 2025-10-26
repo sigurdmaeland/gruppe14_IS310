@@ -384,8 +384,10 @@
   .styrke-item {
     padding: 1.5rem;
     flex-direction: column;
-    text-align: center;
-    gap: 1rem;
+  text-align: center;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
   }
   
   .styrke-nummer {
