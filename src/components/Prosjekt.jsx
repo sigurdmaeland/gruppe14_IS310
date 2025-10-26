@@ -10,8 +10,8 @@ const Prosjekt = () => {
       id: 1,
       title: "SafeShelter",
       subtitle: "Din trygghet i sanntid",
-      backgroundImage: "/sigurd.png",
-      image: "/henrik.png",
+      backgroundImage: "safeshelter1.png",
+      image: "/safeshelter2.png",
       description: `I 4. semester jobbet gruppen sammen med tre andre medstudenter på et større prosjekt i emnet IS-218. Prosjektet gikk ut på å designe og utvikle SafeShelter, et beredskapsverktøy for den norske befolkningen som skal hjelpe folk med å håndtere krisesituasjoner på en rask og effektiv måte.
 
 Vi la stor vekt på samarbeid, struktur og kvalitet i alle ledd av prosessen. Gruppen jobbet tett sammen om alt fra idéutvikling, design og prototyping til implementering og testing. Vi utviklet en brukervennlig applikasjon hvor man enkelt kan finne nærmeste trygge sted, eller selv velge destinasjon, og få raskeste rute basert på egen lokasjon.
@@ -24,13 +24,13 @@ Prosjektet ble svært godt mottatt, og vi fikk karakter A for arbeidet. Vi er st
       id: 2,
       title: "Kartverket",
       subtitle: "Kartløsninger for fremtiden",
-      backgroundImage: "/henrik.png",
-      image: "/henrik.png",
+      backgroundImage: "/kartverket1.png",
+      image: "/kartverket1.png",
       description: `Kartverket-prosjektet var et spennende samarbeid hvor vi utviklet moderne kartløsninger med fokus på brukervennlighet og nøyaktighet. Prosjektet involverte avansert GIS-teknologi og moderne web-utvikling.
 
 Vi jobbet med interaktive kart, geodata-behandling og responsive brukergrensesnitt. Løsningen inkluderte funksjoner for kartnavigasjon, søk i geodata, og visualisering av komplekse geografiske datasett.
 
-Teknologistacken inkluderte moderne JavaScript-rammeverk, kartbiblioteker som Leaflet/MapBox, og backend-løsninger for effektiv databehandling. Vi la stor vekt på ytelse og skalerbarhet.
+  Teknologistacken inkluderte ASP.NET, kartbiblioteker som Leaflet/MapBox, og backend-løsninger for effektiv databehandling. Vi la stor vekt på ytelse og skalerbarhet.
 
 Prosjektet ga oss verdifull erfaring med geografiske informasjonssystemer og moderne webteknologi, samtidig som vi lærte mye om brukersentrert design innenfor kartapplikasjoner.`
     }
@@ -41,29 +41,21 @@ Prosjektet ga oss verdifull erfaring med geografiske informasjonssystemer og mod
       id: 1,
       title: "Alt i Høyde AS",
       subtitle: "praksisplass hos Alt i Høyde",
-      backgroundImage: "/jonas.png",
-      image: "/jonas.png",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      backgroundImage: "altihoyde2.png",
+      image: "altihoyde1.png",
+      description: `Noen av gruppemedlemmene har praksis dette semesteret hos Alt i Høyde AS, hvor de jobber med et prosjekt innen full-stack utvikling. Prosjektet går ut på å utvikle en helt ny nettside for bedriften. Arbeidet innebærer å fornye designet, bygge en ny backend, og opprette en administrasjonsside som gjør det enkelt for bedriften å håndtere innhold selv.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.`
+Hovedmålet med prosjektet er å utvikle en moderne, brukervennlig og fleksibel nettside som gir verdi både for kunder og ansatte. Gruppen benytter MERN-stacken (MongoDB, Express, React, Node.js) i utviklingen, og får med det praktisk erfaring med både frontend- og backend-utvikling gjennom hele prosessen.`
     },
     {
       id: 2,
       title: "IKT Agder",
-      subtitle: "Utvikling av innovative løsninger",
-      backgroundImage: "/henrik.png",
-      image: "/henrik.png",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      subtitle: "Tjenestekartlegging med LOS-struktur",
+      backgroundImage: "henrik.png",
+      image: "ikt_agder_logo.png",
+      description: `Et av gruppemedlemmene har praksis dette semesteret hos IKT Agder, hvor han har jobbet med å kartlegge og strukturere kommunale tjenester ved hjelp av LOS-strukturen. Målet med prosjektet har vært å skape en bedre oversikt over hvilke tjenester som faktisk leveres i de ulike kommunene, og hvilke fagsystemer som benyttes for å levere dem. Arbeidet skal støtte Samstyringsutvalget i å forstå dagens situasjon og legge til rette for mer effektiv styring og gevinstrealisering.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
-
-Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.`
+I praksisperioden har han bidratt aktivt i kartleggingsarbeidet og undersøkt hvilke digitale verktøy som kan brukes til å samle inn, organisere og presentere data på en enkel og oversiktlig måte. Han har evaluert ulike løsninger, testet ut verktøy, utviklet en prototype og dokumentert funnene i en anbefaling som kan brukes videre i prosjektet.`
     }
   ];
 
@@ -172,9 +164,23 @@ Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et d
                 <h2 className="modal-title">{selectedProject.title}</h2>
                 <p className="modal-subtitle">{selectedProject.subtitle}</p>
                 <div className="modal-description">
-                  {selectedProject.description.split('\n\n').map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                  ))}
+                  {selectedProject.description.split('\n\n').map((paragraph, index, arr) => {
+                    // Inject a clickable promovideo link after the last paragraph for SafeShelter
+                    const isLast = index === arr.length - 1;
+                    if (selectedProject.title === 'SafeShelter' && isLast) {
+                      return (
+                        <p key={index}>
+                          {paragraph}
+                          <br />
+                          <a href="https://www.youtube.com/watch?v=j_XpqJ1WP8I" target="_blank" rel="noopener noreferrer" className="project-video-link">
+                            Se promovideo for SafeShelter
+                          </a>
+                        </p>
+                      );
+                    }
+
+                    return <p key={index}>{paragraph}</p>;
+                  })}
                 </div>
               </div>
             </div>

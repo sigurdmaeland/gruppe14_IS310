@@ -22,26 +22,28 @@
   font-size: 3.2rem;
   font-weight: 700;
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-  -webkit-b  .kontakt-method {
-    padding: 1.1rem 1.8rem;
-    font-size: 1.1rem;
-  }
-  
-  .member-kontakt {
-    padding: 0.6rem;
-  }
-  
-  .member-navn {
-    font-size: 0.9rem;
-  }
-  
-  .member-email {
-    font-size: 0.8rem;
-  }round-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 1rem;
   line-height: 1.1;
+}
+
+.kontakt-method {
+  padding: 1.1rem 1.8rem;
+  font-size: 1.1rem;
+}
+
+.member-kontakt {
+  padding: 0.6rem;
+}
+
+.member-navn {
+  font-size: 0.9rem;
+}
+
+.member-email {
+  font-size: 0.8rem;
 }
 
 .kontakt-subtitle {
