@@ -1,0 +1,447 @@
+/* Bachelor Prosjekt Page Styles */
+.bachelor-prosjekt-page {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 6rem 2rem 4rem 2rem;
+}
+
+.bachelor-prosjekt-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.bachelor-prosjekt-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.bachelor-prosjekt-main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.bachelor-prosjekt-subtitle {
+  font-size: 1.5rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.bachelor-prosjekt-intro {
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Content Sections */
+.bachelor-prosjekt-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.content-section {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  color: white;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.section-body {
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.section-body p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.content-list {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.content-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.content-list li strong {
+  color: var(--accent);
+}
+
+/* Quality Grid */
+.quality-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.quality-card {
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.quality-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.quality-card h3 {
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.quality-card p {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.quality-card strong {
+  color: var(--accent);
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Measurement Table */
+.measurement-table {
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.measurement-row {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 2fr;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.measurement-row:last-child {
+  border-bottom: none;
+}
+
+.measurement-header {
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.measurement-row:not(.measurement-header) {
+  background: var(--bg);
+}
+
+.measurement-row:not(.measurement-header):hover {
+  background: var(--card);
+}
+
+.measurement-row div {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+/* Subsections */
+.subsection {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--bg);
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+}
+
+.subsection h3 {
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.subsection p {
+  margin-bottom: 1rem;
+}
+
+/* Status Timeline */
+.status-timeline {
+  margin-top: 2rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.status-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2.5rem;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--card);
+  box-shadow: 0 0 0 3px var(--border);
+}
+
+.timeline-content {
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.timeline-content h4 {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+.status-badge.pending {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+  border: 1px solid #ffc107;
+}
+
+.status-badge.completed {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+/* Info Box */
+.info-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.1) 0%, rgba(var(--accent-rgb), 0.05) 100%);
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+}
+
+.info-box h4 {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.info-box p {
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Footer */
+.bachelor-prosjekt-footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border);
+  text-align: center;
+}
+
+.footer-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.footer-contact {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.footer-contact a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.footer-contact a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .measurement-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .measurement-row div {
+    padding: 0.5rem 0;
+  }
+
+  .measurement-header {
+    display: none;
+  }
+
+  .measurement-row:not(.measurement-header) div:before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bachelor-prosjekt-page {
+    padding: 5rem 1.5rem 3rem 1.5rem;
+  }
+
+  .bachelor-prosjekt-main-title {
+    font-size: 2.2rem;
+  }
+
+  .bachelor-prosjekt-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .bachelor-prosjekt-intro {
+    font-size: 1rem;
+  }
+
+  .content-section {
+    padding: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-number {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .quality-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subsection {
+    padding: 1.25rem;
+  }
+
+  .status-timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bachelor-prosjekt-page {
+    padding: 4rem 1rem 2rem 1rem;
+  }
+
+  .bachelor-prosjekt-main-title {
+    font-size: 1.8rem;
+  }
+
+  .bachelor-prosjekt-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .content-section {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .section-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .section-body p,
+  .content-list li {
+    font-size: 0.95rem;
+  }
+}

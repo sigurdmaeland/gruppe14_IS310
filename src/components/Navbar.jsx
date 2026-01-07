@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './css/navbar.css';
 
 function Navbar() {
@@ -10,6 +11,8 @@ function Navbar() {
     }
     return 'dark';
   });
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -24,13 +27,28 @@ function Navbar() {
     e.preventDefault();
     setMenuOpen(false);
     
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      });
+    // If not on home page, navigate to home first
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const offsetTop = targetElement.offsetTop - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    } else {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
     }
   };
 
@@ -56,6 +74,11 @@ function Navbar() {
             <li>
               <a href="#home" className="navbar-link" onClick={(e) => handleSmoothScroll(e, 'home')}>
                 Hjem
+              </a>
+            </li>
+            <li>
+              <a href="#bachelor" className="navbar-link" onClick={(e) => handleSmoothScroll(e, 'bachelor')}>
+                Bachelor
               </a>
             </li>
             <li>

@@ -50,6 +50,7 @@ html, body, #root {
 	max-width: 1100px;
 	margin: 0 auto;
 	padding: 0 1rem;
+	display: block;
 }
 
 .page {
@@ -253,11 +254,19 @@ html, body, #root {
 }
 
 .section-title {
-	text-align: center;
+	text-align: center !important;
 	font-size: 2.5rem;
 	color: var(--accent);
 	margin-bottom: 3rem;
 	font-weight: 800;
+}
+
+h1.section-title,
+h2.section-title {
+	text-align: center !important;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .project-card {

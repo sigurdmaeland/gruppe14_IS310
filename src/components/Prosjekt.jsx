@@ -112,7 +112,7 @@ I praksisperioden har han bidratt aktivt i kartleggingsarbeidet og undersøkt hv
 
           {/* Pågående Prosjekter */}
           <div className="project-subsection current-projects-subsection">
-            <h1 className="section-title">Pågående Prosjekter</h1>
+            <h2 className="section-title">Pågående Prosjekter</h2>
             <p className="section-subtitle">
               I tilknytning emnet IS-302 Praksisprosjekt, har samtlige i gruppen vært så heldige å funnet en bedrift å jobbe hos. Les mer om hva vi jobber med denne våren!
             </p>

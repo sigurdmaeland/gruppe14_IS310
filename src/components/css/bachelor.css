@@ -1,0 +1,220 @@
+/* Bachelor Section Styles */
+.bachelor-section {
+  padding: 3rem 2rem;
+  background: var(--bg);
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bachelor-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bachelor-content {
+  text-align: center;
+}
+
+.bachelor-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.bachelor-description {
+  font-size: 1.2rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Interactive Card Button */
+.bachelor-card-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  display: block;
+}
+
+.bachelor-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--border);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  text-align: left;
+}
+
+.bachelor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  border-color: var(--accent);
+}
+
+.bachelor-card-icon {
+  width: 100px;
+  height: 140px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.bachelor-card:hover .bachelor-card-icon {
+  transform: scale(1.05);
+}
+
+.bachelor-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bachelor-card-icon svg {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+.bachelor-card-content {
+  flex: 1;
+  position: relative;
+}
+
+.bachelor-card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.75rem 0;
+}
+
+.bachelor-card-text {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 85%;
+}
+
+.bachelor-card-arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.bachelor-card:hover .bachelor-card-arrow {
+  transform: translateY(-50%) translateX(8px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bachelor-section {
+    padding: 4rem 1.5rem;
+    min-height: 50vh;
+  }
+
+  .bachelor-title {
+    font-size: 2rem;
+  }
+
+  .bachelor-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .bachelor-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  .bachelor-card-content {
+    text-align: center;
+  }
+
+  .bachelor-card-icon {
+    width: 150px;
+    height: 200px;
+  }
+
+  .bachelor-card-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .bachelor-card-title {
+    font-size: 1.5rem;
+  }
+
+  .bachelor-card-text {
+    font-size: 0.95rem;
+  }
+
+  .bachelor-card-arrow {
+    position: static;
+    transform: none;
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .bachelor-card:hover .bachelor-card-arrow {
+    transform: translateX(8px);
+  }
+}
+
+@media (max-width: 480px) {
+  .bachelor-section {
+    padding: 3rem 1rem;
+  }
+
+  .bachelor-title {
+    font-size: 1.75rem;
+  }
+
+  .bachelor-description {
+    font-size: 1rem;
+  }
+
+  .bachelor-card {
+    padding: 1.5rem;
+  }
+
+  .bachelor-card-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .bachelor-card-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .bachelor-card-title {
+    font-size: 1.3rem;
+  }
+}

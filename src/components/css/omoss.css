@@ -10,6 +10,11 @@
   margin: 0 auto 4rem auto;
 }
 
+.omoss-section .section-title {
+  text-align: center !important;
+  width: 100%;
+}
+
 .omoss-subtitle {
   font-size: 1.1rem;
   color: var(--muted);
