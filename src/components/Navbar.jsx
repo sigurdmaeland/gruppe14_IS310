@@ -92,6 +92,11 @@ function Navbar() {
               </a>
             </li>
             <li>
+              <a href="#status1" className="navbar-link" onClick={(e) => handleSmoothScroll(e, 'status1')}>
+                Status 1
+              </a>
+            </li>
+            <li>
               <a href="#kontakt" className="navbar-link" onClick={(e) => handleSmoothScroll(e, 'kontakt')}>
                 Kontakt
               </a>

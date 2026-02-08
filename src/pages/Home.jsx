@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import Bachelor from '../components/Bachelor';
 import Omoss from '../components/Omoss';
 import Prosjekt from '../components/Prosjekt';
+import Status1 from '../components/Status1';
 import Kontakt from '../components/Kontakt';
 import ScrollToTop from '../components/ScrollToTop';
 import './style.css';
@@ -72,6 +73,7 @@ const Home = () => {
       <Bachelor />
       <Omoss />
       <Prosjekt />
+      <Status1 />
       <Kontakt />
       <ScrollToTop />
     </div>
